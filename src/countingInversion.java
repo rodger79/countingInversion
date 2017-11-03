@@ -17,16 +17,29 @@ public class countingInversion {
 		for (int i = 0; i < n; i++){
 			inputArray[i] =  i;
 		}
-		printArray(inputArray);
+		//printArray(inputArray);
 		
-		printArray(shuffle(inputArray));
-
+		//printArray(shuffle(inputArray));
+		System.out.println(10/2);
+		System.out.println(((int)Math.ceil((double)11/2)));
 
 	}
-	public static int countInversions(){
-		int retval = 0;
+	
+	//think of as single array vs multiple array
+	public static int [] mergeSortCountInversions(int a[], int indexl, int indexr){
+		//if (a.length == 1) return a;
 		
-		return retval;
+		int retval = 0;
+		int m = (int) Math.ceil((double)a.length / 2);
+		
+		mergeSortCountInversions(a,indexl, m);
+		mergeSortCountInversions(a,m+1, indexr);
+		
+		
+		return mergeCount(a,indexl,m,indexr);
+	}
+	public static int[] mergeCount(int a[], int l, int m, int r){
+	
 	}
 	public static void printAnalysisToFile(String filename, String text) throws UnsupportedEncodingException, FileNotFoundException, IOException{
 		
