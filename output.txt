@@ -1,0 +1,6 @@
+Input size: 5
+Total Inversions: 8
+Total Runtime: 3
+Input size: 5
+Total Inversions: 3
+Total Runtime: 3
